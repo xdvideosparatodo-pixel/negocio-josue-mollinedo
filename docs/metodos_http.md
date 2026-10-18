@@ -17,3 +17,27 @@
   * **Código de respuesta**: 200 OK
   * **Respuesta**: Devuelve un arreglo con los 10 posts del usuario (puedes consultar el contenido completo en la documentación de referencia).
 ---
+### 2. POST (Añadir un nuevo post al userId 1)
+
+* **¿Para qué sirve?**: Crea un undécimo post vinculándolo al id del usuario solicitado de forma simulada.
+* **Configuración en Thunder Client**:
+  * **Método**: POST
+  * **URL**: https://jsonplaceholder.typicode.com/posts
+  * **Pestaña Body -> JSON**:
+    ```json
+    {
+      "title": "Mi nuevo post número 11",
+      "body": "Este es un post adicional de prueba en la colección.",
+      "userId": 1
+    }
+    ```
+  * **Código de respuesta**: 201 Created
+  * **Respuesta**:
+    ```json
+    {
+      "title": "Mi nuevo post número 11",
+      "body": "Este es un post adicional de prueba en la colección.",
+      "userId": 1,
+      "id": 101
+    }
+    ```
