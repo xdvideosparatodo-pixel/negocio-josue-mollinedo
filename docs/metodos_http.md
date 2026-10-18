@@ -67,3 +67,25 @@
     ```
 
 ---
+### 4. PATCH (Modificación parcial de un post del usuario)
+
+* **¿Para qué sirve?**: Altera únicamente un campo específico del post asignado sin necesidad de reenviar toda la estructura de datos.
+* **Configuración en Thunder Client**:
+  * **Método**: PATCH
+  * **URL**: https://jsonplaceholder.typicode.com/posts/1
+  * **Pestaña Body -> JSON**:
+    ```json
+    {
+      "title": "Solo actualizo el título manteniendo el cuerpo original"
+    }
+    ```
+  * **Código de respuesta**: 200 OK
+  ```json
+    {
+    "userId": 1,
+    "id": 1,
+    "title": "Solo actualizo el título manteniendo el cuerpo original",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+    ```
+---
