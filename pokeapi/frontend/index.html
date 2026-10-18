@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Pokémon</title>
+    <style>
+        body {
+        font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
+        text-align: center;
+        background: linear-gradient(135deg, #f3c623 0%, #f08a5d 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+        margin: 0;
+        color: #333;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #3b4cca;
+            text-shadow: 3px 3px 0px #ffde00;
+            margin-bottom: 25px;
+        }
+
+        .buscador {
+            margin-bottom: 35px;
+        }
+
+        .buscador input {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 3px solid #3b4cca;
+            border-radius: 25px;
+            outline: none;
+            width: 220px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .buscador button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #cc0000;
+            color: white;
+            border: 3px solid #3b4cca;
+            border-radius: 25px;
+            margin-left: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .buscador button:hover {
+            background: #ff1c1c;
+            transform: scale(1.05); 
+        }
+
+        #resultado {
+            margin-top: 30px;
+        }
+
+        .tarjeta {
+            background: #ffffff;
+            display: inline-block;
+            padding: 25px;
+            border: 5px solid #3b4cca; 
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            width: 280px;
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta h2 {
+            text-transform: uppercase;
+            font-size: 22px;
+            color: #3b4cca;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .contenedor-img {
+            background: radial-gradient(circle, #e0f2fe 0%, #bae6fd 100%);
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px dashed #3b4cca;
+        }
+
+        .tarjeta img {
+            width: 130px;
+            height: 130px;
+        }
+
+        .tarjeta p {
+            font-size: 16px;
+            margin: 10px 0;
+            padding: 6px 12px;
+            background: #f8fafc;
+            border-radius: 10px;
+            text-align: left;
+            font-weight: bold;
+            border-left: 5px solid #ffde00;
+        }
+
+        .cargando {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        }
+
+        .error {
+            font-size: 18px;
+            font-weight: bold;
+            color: #cc0000;
+            background: white;
+            display: inline-block;
+            padding: 12px 24px;
+            border: 3px solid #cc0000;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Buscador de Pokémon</h1>
+
+    <div class="buscador">
+        <input type="text" id="inputNombre" placeholder="Ej: pikachu">
+        <button id="btnBuscar">Buscar</button>
+    </div>
+
+    <div id="resultado"></div>
+    <footer class="pie-pagina">
+        <p>&copy; 2026 - Desarrollado enrique-fernandez-c</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
