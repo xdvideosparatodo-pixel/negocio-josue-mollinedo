@@ -89,3 +89,15 @@
     }
     ```
 ---
+### 5. DELETE (Eliminar un post de la lista del usuario)
+
+* **¿Para qué sirve?**: Borra un recurso específico (por ejemplo, el post id: 1) de la lista de los 10 posts de ese usuario.
+* **Configuración en Thunder Client**:
+  * **Método**: DELETE
+  * **URL**: https://jsonplaceholder.typicode.com/posts/1
+  * **Pestaña Body**: icon-none (Vacío).
+  * **Código de respuesta**: 200 OK
+  * **Respuesta**: `{}` (Objeto vacío que confirma la remoción simulada).
+  ```json
+  {}
+  ```
