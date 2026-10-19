@@ -41,3 +41,29 @@
       "id": 101
     }
     ```
+### 3. PUT (Reemplazo total de uno de los posts del usuario)
+
+* **¿Para qué sirve?**: Modifica por completo el contenido de uno de los 10 posts existentes (por ejemplo, el post con id: 1).
+* **Configuración en Thunder Client**:
+  * **Método**: PUT
+  * **URL**: https://jsonplaceholder.typicode.com/posts/1
+  * **Pestaña Body -> JSON**:
+    ```json
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Este título reemplaza al original del primer post",
+      "body": "Contenido completamente sobrescrito."
+    }
+    ```
+  * **Código de respuesta**: 200 OK
+    ```json
+    {
+    "id": 1,
+    "userId": 1,
+    "title": "Este título reemplaza al original del primer post",
+    "body": "Contenido completamente sobrescrito."
+    }
+    ```
+
+---
